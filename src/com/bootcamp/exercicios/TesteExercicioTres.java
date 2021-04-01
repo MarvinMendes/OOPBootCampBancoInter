@@ -1,6 +1,6 @@
 package com.bootcamp.exercicios;
 
-public class ExercicioTres {
+public class TesteExercicioTres {
     /*Proposta de exercício
     *Criar três tipos de funcionários
     * Gerente, supervisor e atendente
@@ -30,6 +30,16 @@ public class ExercicioTres {
         carro.freia();
         System.out.println(carro);
         System.out.printf("O valor do IPVA do veículo: %s é de: R$%.02f", carro.getModelo(), carro.calculaIPVA());
+        System.out.println("\n****************************************************************************************");
+
+        var gerente = new Gerente("Guilherme", 17, 03, 1980, "1231423421", 20000d);
+        System.out.printf("\nO imposto que %s deve pagar e de: R$%.2f", gerente.getNome(), gerente.calculaImposto());
+
+        var supervisor = new Supervisor("Fernando", 11, 01, 1978, "5345346123", 10000d);
+        System.out.printf("\nO imposto que %s deve pagar e de: R$%.2f", supervisor.getNome(), supervisor.calculaImposto());
+
+        var atendente = new Atendente("Victor", 29, 06, 1990, "5564464877", 5000d);
+        System.out.printf("\nO imposto que %s deve pagar e de: R$%.2f", atendente.getNome(), atendente.calculaImposto());
 
     }
 

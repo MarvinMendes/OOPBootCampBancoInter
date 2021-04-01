@@ -12,10 +12,10 @@ public class TesteExercicioDois {
      */
 
     public static void main(String[] args) {
-        var fiatCinquecento = new Carro("500", "Fiat", 2021);
+        var fiatCinquecento = new Carro("500", "Fiat", 2021, 30000d);
 
-        var pessoa = new Pessoa("Marvin");
-        var pessoaDois = new Pessoa("Marcelo");
+        var pessoa = new Pessoa("Marvin", 20,02,1993);
+        var pessoaDois = new Pessoa("Marcelo", 18, 02, 1984);
 
         fiatCinquecento.adicionaPessoa(pessoa);
         System.out.println(fiatCinquecento);
