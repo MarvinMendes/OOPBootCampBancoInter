@@ -1,8 +1,9 @@
 package com.bootcamp.exercicios;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
-public class Veiculo {
+public abstract class Veiculo {
     private String modelo;
     private String marca;
     private Double valorVenal;
@@ -44,5 +45,18 @@ public class Veiculo {
                 ", marca='" + marca + '\'' +
                 ", valorVenal=" + valorVenal +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Veiculo veiculo = (Veiculo) o;
+        return this.hashCode() == o.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(modelo, marca, valorVenal);
     }
 }
