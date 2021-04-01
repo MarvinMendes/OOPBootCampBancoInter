@@ -9,7 +9,7 @@ public class TesteExercicioUm {
         var pessoa = new Pessoa("Marvin");
         var pessoaDois = new Pessoa("Marcelo");
 
-        var volvo = new Carro();
+        var volvo = new Carro("C30", "VOLVO", 2013);
         volvo.adicionaPessoa(pessoa);
         System.out.println(volvo);
 
