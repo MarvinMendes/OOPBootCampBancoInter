@@ -2,7 +2,7 @@ package com.bootcamp.funcional;
 
 import java.util.function.Consumer;
 
-public class TesteConsumer {
+public class Consumidor {
     public static void main(String[] args) {
         //imprime na tela
         Consumer<String> consumerUm = valor -> System.out.println(valor);
