@@ -1,6 +1,7 @@
 package com.bootcamp.funcional;
 
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class Supridores {
     public static void main(String[] args) {
@@ -10,12 +11,19 @@ public class Supridores {
 }
 
 class Pessoa {
-    String nome;
-    String anoNascimento;
+    private String nome;
+    private String anoNascimento;
+
     public Pessoa() {
-        this.nome = "Marvin";
-        this.anoNascimento = "1993";
+
     }
+
+    public Pessoa(String nome, String anoNascimento) {
+        this.nome = nome;
+        this.anoNascimento = anoNascimento;
+    }
+
+
 
     @Override
     public String toString() {
