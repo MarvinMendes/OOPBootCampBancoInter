@@ -16,6 +16,7 @@ public class HighOrderFunction {
         ImprimeResultado(numeros,selecaoImpar);
 
         System.out.println("\nDe maneira diferente agora");
+
         /*A função ImprimeResultado ta esperando um função como parâmetro
         o que vamos fazer aqui é chamar uma outra função que vai receber um parâmetro
         e vai nos retornar uma função para preenchermos o parâmetro da nossa primeira funcção
