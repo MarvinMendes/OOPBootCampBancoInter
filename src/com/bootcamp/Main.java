@@ -3,10 +3,12 @@ package com.bootcamp;
 import com.bootcamp.exercicios.Carro;
 import com.bootcamp.exercicios.Pessoa;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -37,5 +39,15 @@ public class Main {
         Double[] numeros = new Double[] {7.2, 3.8, 4.25, 5.75 };
         Double numerosComReduce = Stream.of(numeros).reduce(0.0, (Double a, Double b) -> a + b);
         System.out.println("Números com o Reduce { " + numerosComReduce + " }");
+        //mais funções
+
+        Function<Integer, Integer> incrementa = numero -> numero + 1;
+        Function<Integer, Integer> multiplicaPorDez = numero -> numero * 10;
+        Integer incrementoDeUm = incrementa.apply(1);
+        System.out.println("\nIncremento..." + incrementoDeUm);
+        System.out.println("multiplicando por 10! :: " + multiplicaPorDez.apply(incrementoDeUm));
+        //utilizando o método and then
+        System.out.println("Incrementando e multiplicando com chamada a função andThen => " + incrementa.andThen(multiplicaPorDez).apply(4));;
+
     }
 }
