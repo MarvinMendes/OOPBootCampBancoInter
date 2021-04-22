@@ -1,4 +1,4 @@
-package internal;
+package com.java.modular.module.utils.internal;
 
 public class MultiplicaHelper implements Operacao{
     @Override

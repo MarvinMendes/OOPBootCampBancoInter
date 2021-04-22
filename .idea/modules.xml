@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OOPBootCampBancoInter.iml" filepath="$PROJECT_DIR$/OOPBootCampBancoInter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.java.modular.module.core/com.java.modular.module.core.iml" filepath="$PROJECT_DIR$/com.java.modular.module.core/com.java.modular.module.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.java.modular.module.utils/com.java.modular.module.utils.iml" filepath="$PROJECT_DIR$/com.java.modular.module.utils/com.java.modular.module.utils.iml" />
     </modules>
   </component>
 </project>
