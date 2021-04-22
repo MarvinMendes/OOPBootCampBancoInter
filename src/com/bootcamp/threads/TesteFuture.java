@@ -64,3 +64,42 @@ class Casa {
     public Casa(Comodo... comodos) {
         this.comodos = Arrays.asList(comodos);
     }
+
+    public List<Atividade> getAtividadesDaCasa() {
+        return this.comodos.stream().map(
+                Comodo::getAtividadesDoComodo
+        ).reduce(new ArrayList<Atividade>(), (pivo, atividades) -> {
+            pivo.addAll(atividades);
+            return pivo;
+        });
+    }
+
+    }
+
+class Quarto extends Comodo {
+
+    @Override
+    List<Atividade> getAtividadesDoComodo() {
+        return Arrays.asList(
+                this::varreOQuarto,
+                this::arrumaACama,
+                this::arrumaOGuardaRoupas
+        );
+    }
+
+    public String arrumaOGuardaRoupas() throws InterruptedException {
+        Thread.sleep(500);
+        System.out.println("Arrumando o guarda-roupas...");
+        return " arrumar o guarda-roupas";
+    }
+    public String arrumaACama() throws InterruptedException {
+        Thread.sleep(500);
+        System.out.println("Arrumando a cama...");
+        return " arrumar a cama";
+    }
+    public String varreOQuarto() throws InterruptedException {
+        Thread.sleep(500);
+        System.out.println("Varrendo o quarto...");
+        return " varrer o quarto";
+    }
+}
